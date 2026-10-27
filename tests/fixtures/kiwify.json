@@ -1,0 +1,7 @@
+{
+  "order_id": "kiw-1",
+  "order_status": "paid",
+  "webhook_event_type": "order_approved",
+  "Product": { "product_id": "prod-abc", "product_name": "Curso Exemplo" },
+  "Customer": { "full_name": "João", "email": "joao@x.com", "mobile": "+55 (37) 9 8000-1001" }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "evt-hot-1",
+  "event": "PURCHASE_APPROVED",
+  "version": "2.0.0",
+  "data": {
+    "product": { "id": 4512345, "name": "Curso Exemplo" },
+    "buyer": { "name": "Maria", "email": "maria@x.com", "checkout_phone": "(37) 9 8000-1001" },
+    "purchase": { "transaction": "HP123", "status": "APPROVED" }
+  }
+}

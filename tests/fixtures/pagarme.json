@@ -1,0 +1,10 @@
+{
+  "id": "hook_pg_1",
+  "type": "order.paid",
+  "data": {
+    "id": "or_1",
+    "status": "paid",
+    "customer": { "name": "Ana", "phones": { "mobile_phone": { "country_code": "55", "area_code": "37", "number": "980001001" } } },
+    "items": [{ "code": "curso-exemplo", "description": "Curso Exemplo" }]
+  }
+}

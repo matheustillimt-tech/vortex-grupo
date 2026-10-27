@@ -1,0 +1,21 @@
+# dependências e build
+node_modules
+.next
+out
+dist
+*.tsbuildinfo
+
+# variáveis de ambiente (segredos): só o exemplo vai pro GitHub
+.env
+.env*
+!.env.example
+
+# Vercel e Supabase (arquivos locais)
+.vercel
+supabase/.temp
+supabase/.branches
+
+# testes e sistema
+coverage
+.DS_Store
+*.log

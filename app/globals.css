@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+
+  /* Cores do painel (modo escuro). Pra trocar a identidade visual, mude só estas variáveis: todas as telas
+   * usam as classes `vg-*` que saem daqui (ex.: `bg-vg-bg`, `text-vg-accent`). */
+
+  /* Superfícies */
+  --color-vg-bg: #080a09;
+  --color-vg-side: #0d120f;
+  --color-vg-panel: #1b221e; /* meio do degradê do cartão, menus e janelas, hover */
+  --color-vg-panel-2: #242e28; /* item ativo, hover de linha */
+  --color-vg-panel-3: #101813; /* início do degradê, fundo de campo */
+  --color-vg-pilula: #15211a;
+
+  /* Bordas */
+  --color-vg-line: rgb(255 255 255 / 0.13);
+  --color-vg-line-2: rgb(255 255 255 / 0.26);
+
+  /* Texto */
+  --color-vg-text: #f6f7f6;
+  --color-vg-text-2: #b4bdb7;
+  --color-vg-muted: #929f96;
+  --color-vg-text-3: #76877c;
+  --color-vg-rotulo: #76877c;
+
+  /* Destaque (verde) */
+  --color-vg-accent: #0fa968;
+  --color-vg-accent-2: #0fa968;
+  --color-vg-accent-3: #8de7bb; /* texto em destaque, hover de link */
+  /* Botão principal: verde mais fechado pra o texto branco ler bem (degradê #13794f → #0b6140) */
+  --color-vg-primario: #13794f;
+  --color-vg-primario-hover: #158359;
+
+  /* Estados */
+  --color-vg-ok: #65dfab;
+  --color-vg-aviso: #f1ce87;
+  --color-vg-erro: #f26d68;
+
+  /* Link do cartão de ação */
+  --color-vg-link: #8de7bb;
+
+  /* Caixa de destaque (aviso informativo) */
+  --color-vg-destaque: #0c1a13;
+  --color-vg-destaque-2: #0c1a13;
+  --color-vg-destaque-borda: rgb(116 216 168 / 0.33);
+}
+
+html { color-scheme: dark; }
+html, body { background: var(--color-vg-bg); color: var(--color-vg-text); }
+/* Brilho verde de fundo */
+body { background-image: radial-gradient(48% 52% at 94% 32%, rgb(15 169 104 / 0.08), transparent 75%), radial-gradient(42% 30% at 22% 86%, rgb(15 169 104 / 0.04), transparent 75%); background-attachment: fixed; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--color-vg-accent); }
+/* Lista aberta do <select>: no Chrome do Windows ela vem com fundo branco e herda o texto claro
+ * do campo (branco no branco). Fundo e cor explícitos nas opções resolvem em todo o painel. */
+select { color-scheme: dark; }
+select option, select optgroup { background-color: var(--color-vg-panel); color: var(--color-vg-text); }
+::selection { background: rgb(15 169 104 / 0.3); }
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  overflow: hidden;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
